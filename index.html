@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script> 
+    <title>Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <form action="http://localhost:3000/submit-form" id="form" method="post">
+            <h1>Registration Form</h1>
+            <div class="form-group">
+                <label for="first_name">First Name:</label>
+                <input type="text" id="firstname" name="first_name">
+                <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name:</label>
+                <input type="text" id="lastname" name="last_name">
+                <span class="error-message" id="lastname-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <input type="checkbox" onclick="togglePasswordVisibility('password')">Show Password
+                <span class="error-message" id="password-error"></span>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirmpassword" name="confirm_password">
+                <input type="checkbox" onclick="togglePasswordVisibility('confirmpassword')">Show Password
+                <span class="error-message" id="confirmpassword-error"></span>
+            </div>
+            <button type="submit" id="register-button">Register</button>
+        </form>
+    </div>
+</body>
+</html>
